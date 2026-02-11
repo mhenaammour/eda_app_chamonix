@@ -9,6 +9,11 @@ import plotly.graph_objects as go
 # ============================================================
 st.set_page_config(page_title="Chamonix — Le Sommet en Sursis", page_icon="🦌", layout="wide")
 
+audience_txt = (
+    "Audience cible :\n"
+    "Gestionnaires d’espaces naturels (parc/réserve/collectivités), acteurs du tourisme (opérateurs, remontées, offices),\n"
+    "et équipes terrain (écogardes, suivi faune) dans la vallée de Chamonix / Mont-Blanc.\n"
+)
 
 link_txt = (
     "Lien vers la narration (à compléter) :\n"
@@ -349,8 +354,7 @@ st.markdown("""
     sur la présence et l’activité de la faune sauvage, en croisant des données de comptage
     (éco-compteurs / remontées) et des détections issues de pièges photos,
     selon des dimensions <b>temporelles</b> (heure, jour/nuit, saison) et <b>spatiales</b> (site, altitude).<br><br>
-    <b>Audience.</b> Gestionnaires d’espaces naturels et acteurs du tourisme qui doivent concilier attractivité
-    et protection de la biodiversité (sans conclure à une causalité stricte).
+   
   </div>
 
   <div class="kpi">
@@ -849,4 +853,5 @@ crépusculaires. Cette dissociation temporelle est compatible avec une stratégi
 """, unsafe_allow_html=True)
 
 st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — Chamonix / Mont-Blanc")
+
 

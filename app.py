@@ -9,11 +9,6 @@ import plotly.graph_objects as go
 # ============================================================
 st.set_page_config(page_title="Chamonix — Le Sommet en Sursis", page_icon="🦌", layout="wide")
 
-audience_txt = (
-    "Audience cible :\n"
-    "Gestionnaires d’espaces naturels (parc/réserve/collectivités), acteurs du tourisme (opérateurs, remontées, offices),\n"
-    "et équipes terrain (écogardes, suivi faune) dans la vallée de Chamonix / Mont-Blanc.\n"
-)
 
 link_txt = (
     "Lien vers la narration (à compléter) :\n"
@@ -854,3 +849,4 @@ crépusculaires. Cette dissociation temporelle est compatible avec une stratégi
 """, unsafe_allow_html=True)
 
 st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — Chamonix / Mont-Blanc")
+

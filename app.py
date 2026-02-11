@@ -842,7 +842,7 @@ st.markdown("</div>", unsafe_allow_html=True)
 # CONCLUSION
 # ============================================================
 st.markdown('<a name="final"></a>', unsafe_allow_html=True)
-st.header("Épilogue — Ce que doit retenir l’audience")
+st.header("Ce que vous devez retenir")
 
 st.markdown("""
 <div class="narr narr-green fadein">
@@ -853,5 +853,6 @@ crépusculaires. Cette dissociation temporelle est compatible avec une stratégi
 """, unsafe_allow_html=True)
 
 st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — Chamonix / Mont-Blanc")
+
 
 

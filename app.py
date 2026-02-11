@@ -737,14 +737,31 @@ with gcol:
     fig_map = px.scatter_map(
         map_stats,
         lat="latitude", lon="longitude",
-        color="humans", size="fauna",
-        color_continuous_scale="OrRd",
-        size_max=32, zoom=10.5, height=560,
+        color="humans",
+        size="fauna",
+        color_continuous_scale="YlOrRd",   # palette plus contrastée
+        range_color=(map_stats["humans"].quantile(0.05),
+                     map_stats["humans"].quantile(0.95)),  # scale resserré
+        size_max=36,
+        zoom=10.5,
+        height=560,
         hover_name=map_stats.index,
         hover_data={"altitude": True, "humans": True, "fauna": True}
     )
-    fig_map.update_layout(mapbox_style="carto-darkmatter", template="plotly_dark", margin=dict(l=10,r=10,t=20,b=10))
-    st.plotly_chart(fig_map, width='stretch')
+
+    fig_map.update_layout(
+        mapbox_style="carto-darkmatter",
+        template="plotly_dark",
+        margin=dict(l=10, r=10, t=20, b=10),
+        coloraxis_colorbar=dict(
+            title="Humains",
+            tickcolor="rgba(255,255,255,0.7)",
+            outlinewidth=0
+        )
+    )
+
+    st.plotly_chart(fig_map, use_container_width=True)
+
 
 with tcol:
     # stats simples
@@ -853,6 +870,7 @@ crépusculaires. Cette dissociation temporelle est compatible avec une stratégi
 """, unsafe_allow_html=True)
 
 st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — Chamonix / Mont-Blanc")
+
 
 
 

@@ -869,7 +869,8 @@ crépusculaires. Cette dissociation temporelle est compatible avec une stratégi
 </div>
 """, unsafe_allow_html=True)
 
-st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — Chamonix / Mont-Blanc")
+st.caption("Données : CREA Mont-Blanc | Narration : Master DS4SC — BOUZELAT Tarek — AMMOUR M'hena")
+
 
 
 
